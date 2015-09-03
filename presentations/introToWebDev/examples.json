@@ -1,0 +1,12 @@
+[
+  {
+    "name": "snapshot01",
+    "number": 1,
+    "message": "Starter HTML page with a text input",
+    "files": [
+      "index.html"
+    ],
+    "url": "https://github.com/janisg/is104/tree/gh-pages/presentations/introToAngular/examples/snapshots/snapshot01",
+    "runUrl": "http://curran.github.io/is104/presentations/introToAngular/examples/snapshots/snapshot01"
+  }
+]

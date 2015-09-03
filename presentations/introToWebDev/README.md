@@ -1,1 +1,3 @@
-En introduksjon til Web Utvikling. Hands-on.
+En introduksjon til Web Utvikling. 
+
+Hands-on med eksempler.
