@@ -17,31 +17,35 @@
     <![endif]-->
   </head>
   <body role="document">
-    <div class="container">
     <div class="jumbotron">
-    <h1>
-        <span class="label label-info">Introduksjon i Web Programmering</span>
-    </h1>
+      <!-- First container in jumbotron -->
+      <div class="container">
+        <h1>Introduksjon i Web Programmering</h1>
+        <hr>
+        <p>
+          &nbsp;Web Programmering er en del av applikasjonsutvikling for World Wide Web.
+          World Wide Web består av (1) mulighet til å lagre (delvis) og finne ressurser i et nettverk
+          av lagringsenheter (URI, URL), (2) mulighet til å sende meldinger mellom enheter
+          (HTTP) og (3) mulighet til å prosessere innholdet slik at den er brukbart for
+          brukeren (HTML).
+          &nbsp;Web Programmering sett fra fugleperspektivet, baserer seg på klient-tjener modellen,
+          dvs. at "data" lagres på en tjener, som kan motta forespørsler fra en eller mange klienter.
+          En klient oppgir en URI, som da kan sendes gjennom nettverk til server, som da
+          kan bearbeide forespørsel (eng. request) og sende et svar (eng. respons) tilbake til klienten.
+        </p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Eksempler &raquo;</a></p>
+      </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<hr />
-<p>
-&nbsp;Web Programmering er en del av applikasjonsutvikling for World Wide Web.
-World Wide Web består av (1) mulighet til å lagre (delvis) og finne ressurser i et nettverk
-av lagringsenheter (URI, URL), (2) mulighet til å sende meldinger mellom enheter
-(HTTP) og (3) mulighet til å prosessere innholdet slik at den er brukbart for
-brukeren (HTML).
-&nbsp;Web Programmering sett fra fugleperspektivet, baserer seg på klient-tjener modellen,
-dvs. at "data" lagres på en tjener, som kan motta forespørsler fra en eller mange klienter.
-En klient oppgir en URI, som da kan sendes gjennom nettverk til server, som da
-kan bearbeide forespørsel (eng. request) og sende et svar (eng. respons) tilbake til klienten.
-</p>
-    </div>
 
+    <!-- Second container in jumbotron -->
+    <div class="container">
     <div class="row">
+
+<!-- Start of web programming -->
       <div class="col-sm-6 col-md-3 col-lg-3">
       <div class="thumbnail">
         <img src="images/thumbs/prog01.004.thumb.png" alt="Styled 3-D picture of code">
@@ -52,6 +56,7 @@ kan bearbeide forespørsel (eng. request) og sende et svar (eng. respons) tilbak
         </div>
       </div>
       </div>
+<!-- End of web programming -->
 
 <!-- Start of history -->
       <div class="col-sm-6 col-md-3 col-lg-3">
@@ -140,6 +145,10 @@ kan bearbeide forespørsel (eng. request) og sende et svar (eng. respons) tilbak
 
 
     </div>
+<!-- End of row -->
    </div>
+<!-- End of second container -->
+  </div>
+<!-- End of jumbotron -->
   </body>
 </html>
