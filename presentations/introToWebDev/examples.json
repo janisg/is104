@@ -2,7 +2,7 @@
   {
     "name": "snapshot01",
     "number": 1,
-    "message": "Starter HTML page with a text input",
+    "message": "Et skall for et HTML dokument med en hilsen.",
     "files": [
       "index.html"
     ],
