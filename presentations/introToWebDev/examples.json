@@ -2,7 +2,7 @@
   {
     "name": "snapshot01",
     "number": 1,
-    "message": "Et skall for et HTML dokument med en hilsen.",
+    "message": "Et skall for et HTML dokument.",
     "files": [
       "index.html"
     ],
