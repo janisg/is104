@@ -1,1 +1,1 @@
-Et skall for et HTML dokument (document) med en hilsen.
+Et skall for et HTML dokument (document).
