@@ -1,3 +1,3 @@
-En introduksjon til Web Utvikling. 
+Web Programmering med HTML, CSS, JavaScript ++
 
-Hands-on med eksempler.
+Illustrert med eksempler
