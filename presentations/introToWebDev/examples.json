@@ -8,5 +8,15 @@
     ],
     "url": "https://github.com/janisg/is104/tree/gh-pages/presentations/introToWebDev/examples/snapshots/snapshot01",
     "runUrl": "http://janisg.github.io/is104/presentations/introToWebDev/examples/snapshots/snapshot01"
+  },
+  {
+    "name": "snapshot02",
+    "number": 2,
+    "message": "Stiling direkte i elementet.",
+    "files": [
+      "index.html"
+    ],
+    "url": "https://github.com/janisg/is104/tree/gh-pages/presentations/introToWebDev/examples/snapshots/snapshot02",
+    "runUrl": "http://janisg.github.io/is104/presentations/introToWebDev/examples/snapshots/snapshot02"
   }
 ]
