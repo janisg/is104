@@ -18,5 +18,15 @@
     ],
     "url": "https://github.com/janisg/is104/tree/gh-pages/presentations/introToWebDev/examples/snapshots/snapshot02",
     "runUrl": "http://janisg.github.io/is104/presentations/introToWebDev/examples/snapshots/snapshot02"
+  },
+  {
+    "name": "snapshot03",
+    "number": 3,
+    "message": "Tegning i HTML.",
+    "files": [
+      "index.html"
+    ],
+    "url": "https://github.com/janisg/is104/tree/gh-pages/presentations/introToWebDev/examples/snapshots/snapshot03",
+    "runUrl": "http://janisg.github.io/is104/presentations/introToWebDev/examples/snapshots/snapshot03"
   }
 ]
