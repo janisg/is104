@@ -20,7 +20,7 @@
       // The presentation layer stays unchanged, only input data changes
       var dataset = [];
       for (var i = 0; i < 25; i++) {
-        var newNumber = Math.random() * 30;
+        var newNumber = Math.round(Math.random() * 30);
         dataset.push(newNumber);
       }
       d3.select("body").selectAll("div").data(dataset).enter().append("div")
