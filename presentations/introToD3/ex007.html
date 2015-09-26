@@ -19,12 +19,13 @@
           .attr("x", 60)
           .attr("y", 60)
           .attr("width", 60)
-          .attr("height", 60);
+          .attr("height", 60)
+          .attr("fill", "white");
 
         var myButton = d3.select("body")
           .append("button")
           .attr("id", "button")
-          .attr("text", "Action");
+          .attr("value", "Action");
 
         myButton.on("click", function() {
           mySquare.transition().attr("x", 320)
