@@ -20,6 +20,7 @@
       // The presentation layer stays unchanged, only input data changes
       var dataset = [];
       for (var i = 0; i < 25; i++) {
+        // Without Math.round there are problems with baseline alignment!
         var newNumber = Math.round(Math.random() * 30);
         dataset.push(newNumber);
       }
