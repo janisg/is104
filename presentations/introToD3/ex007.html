@@ -25,12 +25,12 @@
 
         var myButton = d3.select("body")
           .append("button")
-          .attr("id", "button")
-          .attr("innerHTML", "Action");
+          .attr("id", "button");
 
         myButton.on("click", function() {
           mySquare.transition().attr("x", 320)
-        });
+        })
+          .text("Action");
       </script>
     </body>
 </html>
