@@ -29,7 +29,8 @@
 
         myButton.on("click", function() {
           mySquare.transition().attr("x", 320);
-          if (this.text == "Action") {
+          console.log(this.text());
+          if (this.text() == "Action") {
             this.text("Reset");
           } else {
             this.text("Action");
