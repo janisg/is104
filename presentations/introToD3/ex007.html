@@ -29,11 +29,11 @@
 
         myButton.on("click", function() {
           mySquare.transition().attr("x", 320);
-          console.log(self.text());
-          if (self.text() == "Action") {
-            self.text("Reset");
+          console.log(myButton.text());
+          if (myButton.text() == "Action") {
+            myButton.text("Reset");
           } else {
-            self.text("Action");
+            myButton.text("Action");
           }
         })
           .text("Action");
