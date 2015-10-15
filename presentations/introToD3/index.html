@@ -2,22 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>D3 Test</title>
     <script type="text/javascript" src="d3/d3.v3.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
   </head>
   <body>
-    <script type="text/javascript">
-      // D3 code
-      var dataset = [ 5, 10, 15, 20, 25 ];
-      d3.select("body").selectAll("p").data(dataset).enter().append("p")
-        .text(function(d) { return d; })
-        .style("color", function(d) {
-          if (d > 18) {
-            return "red";
-          } else {
-            return "black";
-          }
-        });
-    </script>
-  </body>
+
+      <div class="container">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+            <div class="col-xs-12 col-md-6" style="background-color:White;">
+              Eksempel 003
+            </div>
+            <div class="col-xs-12 col-md-6" style="background-color:White;">
+              <a href="ex003.html">ex003.html</a>
+            </div>
+        </div>
+      </div>
+
+    </body>
 </html>
