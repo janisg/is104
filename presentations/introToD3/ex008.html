@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Introduction to SVG</title>
+    <script type="text/javascript" src="d3/d3.v3.js"></script>
+  </head>
+    <body>
+      <script type="text/javascript">
+        var w = 500;
+        var h = 150;
+        // Define a reference pointing to a svg object
+        var svg = d3.select("body")
+          .append("svg")
+          .attr("width", w)
+          .attr("height", h);
+
+        var mySquare = svg.append("rect")
+          .attr("x", 60)
+          .attr("y", 60)
+          .attr("width", 60)
+          .attr("height", 60)
+          .attr("fill", "none")
+          .attr("stroke", "blue");
+
+        var myButton = d3.select("body")
+          .append("button")
+          .attr("id", "button");
+
+        myButton.on("click", function() {
+          if (myButton.text() == "Action") {
+            mySquare.transition().attr("x", 320);
+            myButton.text("Reset");
+          } else {
+            mySquare.transition().attr("x", 60);
+            myButton.text("Action");
+          }
+        })
+          .text("Action");
+      </script>
+    </body>
+</html>
