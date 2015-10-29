@@ -16,6 +16,19 @@
       border:1px solid #3285ef; /* just to please the gestalt laws ... */
     }
 
+    #body-container .glossary-container {
+      clear:both; /* This will not allow any floating of elements on both sides */
+    }
+
+    #body-container .content-container {
+      height:430px;
+      width: 415px;
+      overflow:auto; /* a scrollbar will show up if there is enough content */
+      font-family: 'Arial',Verdana,Tahoma; /* Take the standard font Arial */
+      font-size: 10pt;
+      clear: both; /* no floating elements on any of sides */
+    }
+
   </style>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
   <script>
