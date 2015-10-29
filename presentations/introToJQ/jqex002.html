@@ -29,6 +29,20 @@
       clear: both; /* no floating elements on any of sides */
     }
 
+    #body-container .content-container div {
+      padding-left: 10px;
+      border-bottom: 1px #666666 solid;
+    }
+
+    /* To be able to return to the top of the list */
+    #body-container .content-container p.return-to-top {
+      color: #0066FF;
+      text-decoration: underline;
+      text-align: right;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
   </style>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
   <script>
@@ -56,6 +70,7 @@
           <dt>AppleScript</dt>
             <dd>AppleScript is a scripting language made by ... </dd>
           </dl>
+          <p class="return-to-top">Back to the top</p>
       </div>
       <!-- B -->
       <div id="content-for-b">
