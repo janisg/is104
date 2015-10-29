@@ -61,11 +61,31 @@
       cursor: pointer;
     }
 
+    .firstUL li.selected {
+      background: transparent url(link_sprite_img.jpg) no-repeat scroll 0px -57px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
   </style>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
   <script>
   $(function() {
+    $( ".firstUL li" ).each( function() {)
+      $( this ).click( function() { // catch the user action, - clicking on one of the list elements
+        $( ".firstUL li" ).removeClass( "selected" ); // deselect the element
+        $( this ).addClass( "selected" );
+        elementClick = $( this ).attr( "id" ); // get the handle to the selected element
 
+        // scroll down to the element content-for-X, X - selected element / letter
+        $( ".content-container" ).scrollTo($( "#content-for-"+elementClick ), 800);
+
+        // Change the background color
+        $( ".content-container div" ).css( {'background-color' : '#ffffff'} );
+        $( ".content-container #content-for-"+elementClick ).css( {'background-color' : '#d2e2fc'} );
+      });
+    });
   });
   </script>
 </head>
