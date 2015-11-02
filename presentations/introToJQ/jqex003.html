@@ -8,12 +8,23 @@
 </head>
 <body>
   <div class="ui-widget">
-    <label for="tags">Tags: </label>
-    <input id="tags">
+    <label for="groups">Groups: </label>
+    <input id="groups">
   </div>
 
 <script>
   $(function() {
+    var teams = [
+      { teamName : "T1",
+        members: ["T1M1", "T1M2", "T1M3"]
+      },
+      { teamName : "T2",
+        members: ["T2M1", "T2M2", "T2M3"]
+      },
+      { teamName : "T3",
+        members: ["T3M1", "T3M2", "T3M3"]
+      }
+    ];
     var availableTags = [
       "ActionScript",
       "AppleScript",
@@ -39,7 +50,7 @@
       "Scheme"
     ];
     $( "#tags" ).autocomplete({
-      source: availableTags
+      source: teams
     });
   });
 </script>
