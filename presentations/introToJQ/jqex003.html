@@ -9,13 +9,19 @@
   <script>
     $(function() {
       var teams = [
-        { teamName : "T1",
+        { label: "team01",
+          value: "TEAM01",
+          teamName : "T1",
           members: ["T1M1", "T1M2", "T1M3"]
         },
-        { teamName : "T2",
+        { label: "team02",
+          value: "TEAM02",
+          teamName : "T2",
           members: ["T2M1", "T2M2", "T2M3"]
         },
-        { teamName : "T3",
+        { label: "team03",
+          value: "team03",
+          teamName : "T3",
           members: ["T3M1", "T3M2", "T3M3"]
         }
       ];
@@ -44,13 +50,10 @@
         "Scheme"
       ];
       $( "#groups" ).autocomplete({
+        minlenght : 0,
         source: teams,
-        focus: function( event, ui ) {
-          console.log( ui.item.teamName );
-          return false;
-        },
         select: function( event, ui ) {
-            console.log( ui.item.teamName );
+            console.log( ui.item.value );
         }
       });
     });
