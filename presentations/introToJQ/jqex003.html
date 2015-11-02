@@ -49,11 +49,17 @@
         "Scala",
         "Scheme"
       ];
+      var membersString = "";
       $( "#groups" ).autocomplete({
         minlenght : 0,
         source: teams,
         select: function( event, ui ) {
-            console.log( ui.item.value );
+          $( "#groups" ).val( ui.item.label );
+          $( "#teamName" ).html( ui.item.teamName );
+          $( "#team-members" ).html( ui.item.members.forEach(
+            function( member ) {
+              membersString += member;
+            }));
         }
       });
     });
@@ -64,6 +70,8 @@
   <div class="ui-widget">
     <label for="groups">Groups: </label>
     <input id="groups">
+    <h2 id="teamName"></h2>
+    <p id="team-members"></p>
   </div>
 </body>
 </html>
