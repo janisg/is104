@@ -5,54 +5,55 @@
   <title>IS-104 jQuery basics: LIST</title>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  <script>
+    $(function() {
+      var teams = [
+        { teamName : "T1",
+          members: ["T1M1", "T1M2", "T1M3"]
+        },
+        { teamName : "T2",
+          members: ["T2M1", "T2M2", "T2M3"]
+        },
+        { teamName : "T3",
+          members: ["T3M1", "T3M2", "T3M3"]
+        }
+      ];
+      var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"
+      ];
+      $( "#groups" ).autocomplete({
+        source: teams
+      });
+    });
+  </script>
+
 </head>
 <body>
   <div class="ui-widget">
     <label for="groups">Groups: </label>
     <input id="groups">
   </div>
-
-<script>
-  $(function() {
-    var teams = [
-      { teamName : "T1",
-        members: ["T1M1", "T1M2", "T1M3"]
-      },
-      { teamName : "T2",
-        members: ["T2M1", "T2M2", "T2M3"]
-      },
-      { teamName : "T3",
-        members: ["T3M1", "T3M2", "T3M3"]
-      }
-    ];
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#groups" ).autocomplete({
-      source: teams
-    });
-  });
-</script>
 </body>
 </html>
