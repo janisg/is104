@@ -60,6 +60,13 @@
             function( member ) {
               membersString += member;
             }));
+          return false;
+        },
+        _renderItem: function( ul, item ) {
+          return $( "<li>" )
+          .attr( "data-value", item.value )
+          .append( item.label )
+          .appendTo( ul );
         }
       });
     });
