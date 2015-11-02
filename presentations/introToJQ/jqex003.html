@@ -45,8 +45,12 @@
       ];
       $( "#groups" ).autocomplete({
         source: teams,
+        focus: function( event, ui ) {
+          console.log( ui.item.teamName );
+          return false;
+        },
         select: function( event, ui ) {
-            console.log(ui.item.teamName);
+            console.log( ui.item.teamName );
         }
       });
     });
