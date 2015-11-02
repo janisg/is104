@@ -44,7 +44,10 @@
         "Scheme"
       ];
       $( "#groups" ).autocomplete({
-        source: teams.teamName
+        source: teams,
+        select: function( event, ui ) {
+            console.log(ui.item.teamName);
+        };
       });
     });
   </script>
