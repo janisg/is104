@@ -22,59 +22,30 @@
           members: ["T2M1", "T2M2", "T2M3"]
         },
         { label: "team03",
-          value: "team03",
+          value: "TEAM03",
           teamName : "T3",
           members: ["T3M1", "T3M2", "T3M3"]
         }
       ];
-      var availableTags = [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
-      ];
-      var membersString = "";
+
+      var membersHtml = "";
       function getMembers(mList) {
-        membersString = "";
+        membersHtml = "";
         mList.forEach(function(member) {
           console.log(member);
-          membersString += "<p>" + member + "</p>";
+          membersHtml += "<p>" + member + "</p>";
         });
-        return membersString;
+        return membersHtml;
       };
 
-      $( "#groups" ).autocomplete({
+      $( "#teams" ).autocomplete({
         minlenght : 0,
         source: teams,
         select: function( event, ui ) {
-          $( "#groups" ).val( ui.item.label );
+          $( "#teams" ).val( ui.item.label );
           $( "#teamName" ).html( ui.item.teamName );
-          $( "#team-members" ).html( getMembers(ui.item.members) );
+          $( "#teamMembers" ).html( getMembers(ui.item.members) );
           return false;
-        },
-        _renderItem: function( ul, item ) {
-          return $( "<li>" )
-          .attr( "data-value", item.value )
-          .append( item.label )
-          .appendTo( ul );
         }
       });
     });
@@ -84,9 +55,9 @@
 <body>
   <div class="ui-widget">
     <label for="groups">Groups: </label>
-    <input id="groups">
+    <input id="teams">
     <h2 id="teamName"></h2>
-    <p id="team-members"></p>
+    <p id="teamMembers"></p>
   </div>
 </body>
 </html>
