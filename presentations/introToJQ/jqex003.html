@@ -52,13 +52,21 @@
         "Scheme"
       ];
       var membersString = "";
+      function getMembers(mList) {
+        mList.forEach(function(member) {
+          console.log(member);
+          membersString += member;
+        }
+        return membersString;
+      };
+
       $( "#groups" ).autocomplete({
         minlenght : 0,
         source: teams,
         select: function( event, ui ) {
           $( "#groups" ).val( ui.item.label );
           $( "#teamName" ).html( ui.item.teamName );
-          $( "#team-members" ).html( ui.item.members );
+          $( "#team-members" ).html( getMembers(ui.item.members) );
           return false;
         },
         _renderItem: function( ul, item ) {
