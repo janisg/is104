@@ -58,10 +58,7 @@
         select: function( event, ui ) {
           $( "#groups" ).val( ui.item.label );
           $( "#teamName" ).html( ui.item.teamName );
-          $( "#team-members" ).html( ui.item.members.forEach(
-            function( member ) {
-              membersString += member;
-            }));
+          $( "#team-members" ).html( ui.item.members );
           return false;
         },
         _renderItem: function( ul, item ) {
