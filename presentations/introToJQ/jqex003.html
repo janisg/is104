@@ -41,8 +41,12 @@
       $( "#teams" ).autocomplete({
         minlenght : 0,
         source: teams,
+        focus: function( event, ui ) {
+          $( "#teams" ).val( ui.item.value );
+          return false;
+        },
         select: function( event, ui ) {
-          $( "#teams" ).val( ui.item.label );
+          $( "#teams" ).val( ui.item.value );
           $( "#teamName" ).html( ui.item.teamName );
           $( "#teamMembers" ).html( getMembers(ui.item.members) );
           return false;
