@@ -7,15 +7,32 @@
   </head>
     <body>
       <script type="text/javascript">
+        // Data
+        var dataset = [ [150,111,2.9],[175,125,3.5],[200,143,3.9],[225,155,2.9],[250,	169,	3.8] ];
+        // Dimensions of the canvas
         var w = 500;
-        var h = 150;
+        var h = 20;
         // Define a reference pointing to a svg object
         var svg = d3.select("body")
           .append("svg")
           .attr("width", w)
           .attr("height", h);
 
-        var xAxis = svg.axis();
+        var xScale = d3.scale.linear()
+          .domain([0, d3.max(dataset, function(d){ return d[0]; })])
+          .range([0, w]);
+
+        var yScale = d3.scale.linear()
+          .domain([0, d3.max(dataset, function(d){ return d[2]; })])
+          .range([0, h-10]); // lactate in this case is usually between 0.2 and 20.0
+
+        var xAxis = d3.svg.axis()
+          .scale(xScale)
+          .orient("bottom");
+
+        svg.append("g")
+          .call(xAxis);
+          
       </script>
     </body>
 </html>
