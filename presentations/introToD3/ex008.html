@@ -46,8 +46,8 @@
           .orient("bottom");
 
         var line = d3.svg.line()
-          .x(function(d) { return x(d[0]); })
-          .y(function(d) { return y(d[2]); });
+          .x(function(d) { return xScale(d[0]); })
+          .y(function(d) { return yScale(d[2]); });
 
         // Define a reference pointing to a svg object
         var svg = d3.select("body")
