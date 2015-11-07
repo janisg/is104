@@ -20,7 +20,7 @@
     <body>
       <script type="text/javascript">
         // Data
-        var dataset = [ [150,111,2.9],[175,125,3.5],[200,143,3.9],[225,155,2.9],[250,	169,	3.8] ];
+        var dataset = [ [150,111,2.9],[175,125,3.5],[200,143,3.9],[225,155,2.9],[250,169,3.8] ];
         // Dimensions of the canvas
         var w = 500;
         var h = 20;
@@ -46,7 +46,7 @@
           .attr("width", w)
           .attr("height", h);
 
-        svg.append("circle")
+        svg.selectAll("circle")
           .data(dataset)
           .enter()
           .append("circle")
@@ -54,7 +54,7 @@
           .attr("cy", function(d){ return yScale(d[2]); })
           .attr("r", 5);
 
-        svg.append("text")
+        svg.selectAll("text")
           .data(dataset)
           .enter()
           .append("text")
