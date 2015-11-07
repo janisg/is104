@@ -23,13 +23,13 @@
         var dataset = [ [150,111,2.9],[175,125,3.5],[200,143,3.9],[225,155,2.9],[250,169,3.8] ];
         // Dimensions of the canvas
         var w = 500;
-        var h = 20;
+        var h = 100;
 
         // Make some borders
         var padding = 20;
 
         var xScale = d3.scale.linear()
-          .domain([0, d3.max(dataset, function(d){ return d[0]; })])
+          .domain([d3.min(dataset, function(d){ return d[0]; }), d3.max(dataset, function(d){ return d[0]; })])
           .range([padding, w - padding * 2]);
 
         var yScale = d3.scale.linear()
