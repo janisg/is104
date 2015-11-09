@@ -15,12 +15,19 @@
       resultT = powToTime(power, distance);
       resultP = timeToPow(resultT, distance);
 
-      var inputTime = d3.select("body")
+      var form = d3.select("body")
+        .append("form");
+
+      var inputTime = form
         .append("input")
         .attr("type", "text")
         .attr("name", "c2time")
         .attr("title", "Input for time, for example 2:03.5")
         .attr("pattern", "^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d:)?([0-5]?\d)?(\.\d))$");
+
+      var inputSubmit = form
+        .append("input")
+        .attr("sumbit");
 
       var spanT = d3.select("body")
         .append("p")
