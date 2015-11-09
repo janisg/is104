@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Test</title>
+    <script type="text/javascript" src="d3/d3.v3.js"></script>
+    <script type="text/javascript" src="row/xmath.js"></script>
+    <script type="text/javascript" src="row/rowfuncs.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // D3 code
+      var power = 186.3;
+      var distance = 5000;
+      result = powToTime(power, distance);
+
+      var span = d3.select("body")
+        .append("span")
+        .html(result);
+    </script>
+  </body>
+</html>

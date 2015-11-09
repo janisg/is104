@@ -33,6 +33,8 @@
         // Make some borders
         var padding = 20;
 
+        var dispatch = d3.dispatch("load", "statechange");
+
         var xScale = d3.scale.linear()
           .domain([d3.min(dataset, function(d){ return d[0]; }), d3.max(dataset, function(d){ return d[0]; })])
           .range([padding, w - padding * 2]);
@@ -46,7 +48,6 @@
           .orient("bottom");
 
         var line = d3.svg.line()
-          .interpolate("basis")
           .x(function(d) { return xScale(d[0]); })
           .y(function(d) { return yScale(d[2]); });
 
