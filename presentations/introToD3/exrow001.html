@@ -12,11 +12,18 @@
       // D3 code
       var power = 186.3;
       var distance = 5000;
-      result = powToTime(power, distance);
+      resultT = powToTime(power, distance);
+      resultP = timeToPow(resultT, distance);
 
-      var span = d3.select("body")
+      var spanT = d3.select("body")
+        .append("p")
         .append("span")
-        .html(result);
+        .html(resultT);
+
+      var spanP = d3.select("body")
+        .append("p")
+        .append("span")
+        html(resultP);
     </script>
   </body>
 </html>
