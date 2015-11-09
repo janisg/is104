@@ -23,7 +23,7 @@
         .attr("type", "text")
         .attr("name", "c2time")
         .attr("title", "Input for time, for example 2:03.5")
-        .attr("pattern", "^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d:)?([0-5]?\d)?(\.\d))$");
+        .attr("pattern", "/^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d:)?([0-5]?\d)?(\.\d))$/g");
 
       var inputSubmit = form
         .append("input")
