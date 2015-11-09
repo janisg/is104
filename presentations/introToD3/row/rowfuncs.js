@@ -21,5 +21,5 @@ function powToTime(power, distance) {
 function timeToPow(timeStr, distance) {
   parsed = timeStr.split(':');
   seconds = parsed[0]*60+Number(parsed[1]); // risky? implicit type casting?
-  return Math.round10( 1 / ( (1/2.8)*Math.pow(seconds/distance, 3)) );
+  return Math.round10( (1 / ( (1/2.8)*Math.pow(seconds/distance, 3))), -1 );
 }
