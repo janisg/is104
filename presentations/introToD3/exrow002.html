@@ -12,13 +12,13 @@
       // D3 code
       var power = 186.3;
       var distance = 5000;
+      var dataset = [ [500,"2:01.3",26],[1000,"2:02.9",25],[1500,"2:03.1",25],
+                      [2000,"2:03.4",26],[2500,"2:04.2",25],[3000,"2:05.0",26],
+                      [3500,"2:04.9",26], [4000,"2:04.7",26], [4500,"2:04.2",28],
+                      [5000,"2:00.0",32] ];
+
       resultT = powToTime(power, distance);
       resultP = timeToPow(resultT, distance);
-
-      var inputTime = d3.select("body")
-        .append("input")
-        .attr("type", "time")
-        .attr("name", "c2time");
 
       var spanT = d3.select("body")
         .append("p")
