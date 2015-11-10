@@ -4,6 +4,8 @@
 <body>
   <h1>Learning about the call-stack and call-site in JavaScript.</h1>
   <script>
+    // (1) Illustrates the default binding
+    // OBS! Not working in strict modus
     function baz() {
       // call-stack is `baz`
       // call-site is in the global scope
@@ -19,10 +21,27 @@
     function foo() {
       // call-stack is `baz`->`bar`->`foo`
       // call-site is in the `bar`
-      debugger;
+      //debugger;
       console.log("foo");
     }
     baz();
+    // Default binding to the global scope
+    // using strict will prohibit default binding
+    function foo() {
+      console.log( this.a );
+    }
+    var a = 2;
+    foo();
+    // Illustrates the implicit binding
+    function qux() {
+      debugger;
+      console.log( this.a );
+    }
+    var obj = {
+      a: 5,
+      qux: qux
+    }
+    obj.qux();
   </script>
 </body>
 </html>
