@@ -12,10 +12,14 @@
       // D3 code
       var power = 186.3;
       var distance = 5000;
+      // 5k rowing ergometer test OMA/KRK 2015-11-06 afternoon
       var dataset = [ [500,"2:01.3",26],[1000,"2:02.9",25],[1500,"2:03.1",25],
                       [2000,"2:03.4",26],[2500,"2:04.2",25],[3000,"2:05.0",26],
                       [3500,"2:04.9",26], [4000,"2:04.7",26], [4500,"2:04.2",28],
                       [5000,"2:00.0",32] ];
+      // Standard session rowing ergometer OMA/KRK 2015-11-09 evening
+      var standard = [ [1,2304,"2:10.2",22], [2,2311,"2:09.8",24],
+                        [3,2276,"2:11.8",24], [4,2279,"2:11.6",24] ];
 
       resultT = powToTime(power, distance);
       resultP = timeToPow(resultT, distance);

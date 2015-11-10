@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+  <h1>Learning about the call-stack and call-site in JavaScript.</h1>
+  <script>
+    function baz() {
+      // call-stack is `baz`
+      // call-site is in the global scope
+      console.log("baz");
+      bar(); // call-site for `bar`
+    }
+    function bar() {
+      // call-stack is `baz`->`bar`
+      // call-site is in the `baz`
+      console.log("bar");
+      foo();
+    }
+    function foo() {
+      // call-stack is `baz`->`bar`->`foo`
+      // call-site is in the `bar`
+      debugger;
+      console.log("foo");
+    }
+    baz();
+  </script>
+</body>
+</html>
