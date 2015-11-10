@@ -43,38 +43,65 @@
     var obj = {
       a: 5,
       quux: quux
-    }
+    };
     obj.quux();
 
     // Implicit binding, object chaining
     // Only the top/last level matters
     function corge() {
-      debugger;
+      //debugger;
       console.log( this.a );
     }
     var obj2 = {
       a: 42,
       corge: corge
-    }
+    };
     var obj1 = {
       a: 3,
       obj2: obj2
-    }
+    };
     obj1.obj2.corge();
 
     // Implicitly lost (falls back to default binding or undefined (if strict))
     function grault() {
-      debugger;
+      //debugger;
       console.log( this.a );
     }
     var obj3 = {
       a: 47,
       grault: grault
-    }
+    };
     var garply = obj3.grault; // function reference / alias
     var a = "opps, global"; // `a` property on global object
     garply(); // "opps, global"
 
+    // Explicit binding using call()
+    // Does not solve the "loosing this reference" problem
+    function waldo() {
+      console.log( this.a );
+    }
+    var obj4 = {
+      a: 7
+    };
+    waldo.call( obj4 );
+
+    // Hard binding (pattern around explicit binding)
+    // This solves the "loosing this reference" problem
+    function fred() {
+      debugger;
+      console.log( this.a );
+    }
+    var obj5 = {
+      a: 1
+    };
+    var plugh = function() {
+      fred.call( obj5 );
+    }
+    plugh();
+    setTimeout( plugh, 100 );
+    // plugh hard binds fred's this to obj5
+    // it cannot be overriden!
+    plugh.call( window );
   </script>
 </body>
 </html>
