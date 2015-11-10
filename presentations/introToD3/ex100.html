@@ -57,10 +57,24 @@
       corge: corge
     }
     var obj1 = {
-      a: 2,
+      a: 3,
       obj2: obj2
     }
     obj1.obj2.corge();
+
+    // Implicitly lost (falls back to default binding or undefined (if strict))
+    function grault() {
+      debugger;
+      console.log( this.a );
+    }
+    var obj3 = {
+      a: 47,
+      grault: grault
+    }
+    var garply = obj3.grault; // function reference / alias
+    var a = "opps, global"; // `a` property on global object
+    garply(); // "opps, global"
+
   </script>
 </body>
 </html>
